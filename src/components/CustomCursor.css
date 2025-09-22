@@ -1,0 +1,42 @@
+/* CustomCursor.css */
+* {
+  cursor: none !important; /* Override default cursor globally */
+}
+
+body {
+  cursor: none; /* Hide the default cursor */
+}
+
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  border: none; /* Remove border */
+  background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Adjust glowing effect */
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+  cursor: none !important; /* Ensure default cursor is hidden */
+}
+
+button:hover ~ .custom-cursor {
+  background-color: rgba(251, 251, 137, 0.8) !important; /* Change color on button hover */
+  transform: translate(-50%, -50%) scale(1.2) !important; /* Slightly enlarge cursor */
+}
+
+/* Increase specificity for hover effect */
+body button:hover ~ .custom-cursor {
+  background-color: rgba(251, 251, 137, 0.8) !important;
+  transform: translate(-50%, -50%) scale(1.2) !important;
+}
+
+.custom-cursor.hover {
+  background-color: rgba(251, 251, 137, 0.8); /* Change color on hover */
+  transform: translate(-50%, -50%) scale(1.2); /* Slightly enlarge cursor */
+}

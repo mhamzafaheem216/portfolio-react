@@ -1,0 +1,22 @@
+/* Styles for ProjectCards component */
+
+.project-card-view {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-view .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.project-card-view .card-text {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.project-card-view .btn {
+  margin-top: 10px;
+}
