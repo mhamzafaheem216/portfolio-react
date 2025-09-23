@@ -15,6 +15,8 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { MdWorkOutline } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -79,6 +81,26 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <MdWorkOutline style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/education"
+                onClick={() => updateExpanded(false)}
+              >
+                <FaGraduationCap style={{ marginBottom: "2px" }} /> Education
               </Nav.Link>
             </Nav.Item>
 

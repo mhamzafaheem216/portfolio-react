@@ -1,0 +1,274 @@
+.experience-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.experience-timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.experience-timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--imp-text-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(148, 86, 235, 0.5);
+}
+
+.experience-timeline-item {
+  position: relative;
+  width: 100%;
+  padding: 10px 40px;
+  margin-bottom: 50px;
+}
+
+.experience-timeline-content {
+  position: relative;
+  padding: 20px 30px;
+  border-radius: 6px;
+  background-color: rgba(33, 36, 42, 0.9);
+  border: 1px solid rgba(148, 86, 235, 0.3);
+  box-shadow: 0 3px 15px rgba(148, 86, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experience-timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(148, 86, 235, 0.3);
+}
+
+.experience-timeline-content:hover p {
+  border-left-color: var(--imp-text-color);
+  background: linear-gradient(to right, rgba(148, 86, 235, 0.05), transparent);
+}
+
+.experience-timeline-content:hover .experience-skills::before {
+  border-top-color: var(--imp-text-color);
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-left {
+  left: 0;
+   animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.experience-right {
+  left: 50%;
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.experience-left .experience-timeline-content {
+  margin-right: 40px;
+  text-align: right;
+}
+
+.experience-right .experience-timeline-content {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.experience-left .experience-header {
+  flex-direction: row-reverse;
+}
+
+.experience-right .experience-header {
+  flex-direction: row;
+}
+
+.experience-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--imp-text-color);
+  border-radius: 50%;
+  top: 25px;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(148, 86, 235, 0.7);
+}
+
+.experience-left .experience-circle {
+  right: -10px;
+}
+
+.experience-right .experience-circle {
+  left: -10px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.experience-date {
+  background-color: var(--imp-text-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(148, 86, 235, 0.3);
+}
+
+.experience-logo {
+  width: 120px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 1px solid rgba(148, 86, 235, 0.3);
+}
+
+.experience-timeline-content h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 10px rgba(148, 86, 235, 0.3);
+}
+
+.experience-timeline-content h4 {
+  color: var(--imp-text-color);
+  margin-top: 5px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.experience-timeline-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  padding-left: 10px;
+  border-left: 3px solid rgba(148, 86, 235, 0.4);
+  font-weight: 300;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding-top: 12px;
+  position: relative;
+}
+
+.experience-skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  border-top: 1px dashed rgba(148, 86, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experience-skill-tag {
+  background-color: rgba(148, 86, 235, 0.2);
+  color: var(--imp-text-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  border: 1px solid rgba(148, 86, 235, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-timeline-content:hover .experience-skill-tag {
+  border-color: var(--imp-text-color);
+  box-shadow: 0 2px 5px rgba(148, 86, 235, 0.2);
+  animation: skillPulse 2s infinite;
+}
+
+@keyframes skillPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(148, 86, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(148, 86, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(148, 86, 235, 0);
+  }
+}
+
+.experience-skill-tag:hover {
+  background-color: var(--imp-text-color);
+  color: white;
+  border-color: var(--imp-text-color);
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 767px) {
+  .experience-timeline-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .experience-timeline-container::after {
+    left: 31px;
+  }
+  
+  .experience-right, .experience-left {
+    left: 0;
+  }
+  
+  .experience-right .experience-timeline-content,
+  .experience-left .experience-timeline-content {
+    margin-left: 70px;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .experience-right .experience-circle,
+  .experience-left .experience-circle {
+    left: 21px;
+  }
+  
+  .experience-timeline-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+}
