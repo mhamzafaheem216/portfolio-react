@@ -20,3 +20,37 @@
 .project-card-view .btn {
   margin-top: 10px;
 }
+
+/* Ensure project images are a consistent size and maintain aspect ratio */
+.project-card-view img,
+.project-card-view .card-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .project-card-view img,
+  .project-card-view .card-img {
+    max-height: 160px;
+  }
+}
+
+/* 'and many more' typing line beneath projects */
+.projects-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.projects-more .Typewriter__wrapper {
+  color: var(--imp-text-color);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.projects-more .Typewriter__cursor {
+  border-left: 3px solid rgba(148,86,235,0.95);
+}
