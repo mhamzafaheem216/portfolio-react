@@ -572,6 +572,20 @@ button:focus {
   }
 }
 
+/* Experience heading and intro - mobile tweaks */
+@media (max-width: 767px) {
+  .project-heading {
+    font-size: 1.4rem !important; /* smaller heading on mobile */
+    padding-top: 6px !important;
+  }
+
+  /* target the intro paragraph inside experience-section to make it fit */
+  .experience-section p {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+  }
+}
+
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;

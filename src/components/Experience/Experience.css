@@ -242,8 +242,9 @@
 /* Responsive design for smaller screens */
 @media screen and (max-width: 767px) {
   .experience-timeline-container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: hidden; /* remove horizontal scroll on small screens */
   }
   
   .experience-timeline-container::after {
@@ -256,19 +257,61 @@
   
   .experience-right .experience-timeline-content,
   .experience-left .experience-timeline-content {
-    margin-left: 70px;
+    margin-left: 35px; /* bring cards closer to the center line */
     margin-right: 0;
     text-align: left;
+    max-width: 400px; /* smaller card width on mobile */
+    box-sizing: border-box;
+    width: 100%;
   }
   
   .experience-right .experience-circle,
   .experience-left .experience-circle {
-    left: 21px;
+    left: 10px; /* move circles nearer to center */
   }
   
   .experience-timeline-item {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   
+  /* Make fonts smaller on small screens */
+  .experience-timeline-content h3 {
+    font-size: 0.9rem;
+    margin-top: 8px; /* add vertical gap between header and title */
+  }
+
+  .experience-timeline-content h4 {
+    font-size: 0.78rem;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .experience-timeline-content p {
+    font-size: 12px;
+  }
+
+  .experience-skill-tag {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  /* Slightly shrink logo and add visual gap below header */
+  .experience-logo {
+    width: 80px;
+    height: 18px;
+  }
+
+  .experience-header {
+    margin-bottom: 14px; /* vertical gap between header (logo/date) and designation */
+    align-items: center;
+  }
+
+  /* Make the time period pill much smaller on mobile so it doesn't dominate */
+  .experience-date {
+    font-size: 8px !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+  }
+
 }
