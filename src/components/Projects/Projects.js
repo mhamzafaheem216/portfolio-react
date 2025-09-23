@@ -140,6 +140,7 @@ function Projects() {
           </Col>
         </Row>
         <div className="projects-more">
+        <div className="typewriter-fix">
           <Typewriter
             options={{
               strings: [
@@ -159,6 +160,7 @@ function Projects() {
               deleteSpeed: 40,
             }}
           />
+        </div>
         </div>
       </Container>
     </Container>

@@ -41,16 +41,82 @@
 .projects-more {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
+  padding: 0 12px;
+  width: 100%;
+  text-align: center;
 }
 
 .projects-more .Typewriter__wrapper {
+  display: block !important;         /* 🔑 force block behavior */
+  margin: 0 auto;                    /* keeps block centered */
   color: var(--imp-text-color);
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 700;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal !important;    /* override Typewriter’s inline nowrap */
+  max-width: 90%;
+  text-align: center;                /* multi-line text centered */
 }
 
 .projects-more .Typewriter__cursor {
-  border-left: 3px solid rgba(148,86,235,0.95);
+  border-left: 2px solid rgba(148, 86, 235, 0.95);
+  margin-left: 2px;
+}
+
+/* Tablet & mobile tweaks */
+@media screen and (max-width: 767px) {
+  .projects-more {
+    padding: 0 15px;
+  }
+
+  .projects-more .Typewriter__wrapper {
+    font-size: 0.9rem;
+    max-width: 95%;
+  }
+}
+
+/* Extra small devices (<400px) */
+@media screen and (max-width: 400px) {
+  .projects-more .Typewriter__wrapper {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+}
+
+/* Fix for the typewriter in projects section to override global styles */
+.typewriter-fix {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.typewriter-fix .Typewriter {
+  display: block;
+  width: 100%;
+  max-width: 90%;
+  position: static !important; /* Override the problematic absolute positioning */
+}
+
+.typewriter-fix .Typewriter__wrapper {
+  position: static !important; /* Override the absolute positioning */
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem) !important;
+  display: inline-block !important;
+  white-space: normal !important;
+  max-width: 100%;
+  padding-right: 15px; /* Space for cursor */
+}
+
+/* Ensure our styles have higher specificity than the global ones */
+@media (max-width: 767px) {
+  .typewriter-fix .Typewriter__wrapper {
+    position: static !important;
+    font-size: 0.9rem !important;
+  }
 }
