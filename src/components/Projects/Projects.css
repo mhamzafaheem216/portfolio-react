@@ -1,0 +1,48 @@
+/* Project Section Headings */
+.project-section-heading {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.project-section-heading .star-icon {
+  color: var(--imp-text-color);
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+/* Console style for main heading */
+.console-prompt {
+  color: var(rgb(255, 255, 255));
+  font-family: monospace;
+}
+
+.blinking-cursor {
+  color: var(white);
+  font-family: monospace;
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 767px) {
+  .project-section-heading {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .project-section-heading .star-icon {
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+}
