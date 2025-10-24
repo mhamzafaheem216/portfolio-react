@@ -29,14 +29,15 @@ function Projects() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
+        <p style={{ color: "white" }}>
+          Here are a few projects I've worked on recently.
+        </p>
         <h1 className="project-heading">
           <span className="console-prompt">C:\Hamza&gt; cd </span>
           <strong className="purple">My Recent Works</strong>
           <span className="blinking-cursor">_</span>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        
 
         {/* Academic / Freelance Projects Section */}
         <h2 className="project-section-heading">
